@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCC8F110-94BD-4421-A417-133A2D6A038E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Journey.Test.Support</RootNamespace>
+    <AssemblyName>Journey.Test.Support</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Kent.Boogaart.HelperTrinity, Version=1.4.0.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kent.Boogaart.HelperTrinity.1.4.0.0\lib\net40\Kent.Boogaart.HelperTrinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Kent.Boogaart.KBCsv, Version=1.4.0.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kent.Boogaart.KBCsv.1.4.0.0\lib\net40\Kent.Boogaart.KBCsv.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium.WebDriver.2.28.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\AdditionalDriver.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Claim.cs" />
+    <Compile Include="Model\ClaimsAndConvictions.cs" />
+    <Compile Include="Model\ConfigDetails.cs" />
+    <Compile Include="Model\Constants.cs" />
+    <Compile Include="Model\ContactDetails.cs" />
+    <Compile Include="Model\Conviction.cs" />
+    <Compile Include="Model\DrivingHistory.cs" />
+    <Compile Include="Model\Extensions.cs" />
+    <Compile Include="Model\PersonDetails.cs" />
+    <Compile Include="Model\PolicyDetails.cs" />
+    <Compile Include="Model\ReferenceDataItem.cs" />
+    <Compile Include="Model\Risk.cs" />
+    <Compile Include="Model\SteeringType.cs" />
+    <Compile Include="Model\TitleGender.cs" />
+    <Compile Include="Model\VehicleAdditionalDetails.cs" />
+    <Compile Include="Model\VehicleDetails.cs" />
+    <Compile Include="Model\VehicleUsage.cs" />
+    <Compile Include="ObjectMothers\AdditionalDriverCollection.cs" />
+    <Compile Include="ObjectMothers\AdditonalDriverMother.cs" />
+    <Compile Include="ObjectMothers\AddressMother.cs" />
+    <Compile Include="ObjectMothers\ClaimCollection.cs" />
+    <Compile Include="ObjectMothers\ClaimMother.cs" />
+    <Compile Include="ObjectMothers\ClaimsAndConvictionsMother.cs" />
+    <Compile Include="ObjectMothers\ConfigDetailsMother.cs" />
+    <Compile Include="ObjectMothers\ContactDetailsMother.cs" />
+    <Compile Include="ObjectMothers\ConvictionCollection.cs" />
+    <Compile Include="ObjectMothers\ConvictionMother.cs" />
+    <Compile Include="ObjectMothers\DrivingHistoryMother.cs" />
+    <Compile Include="ObjectMothers\Extension.cs" />
+    <Compile Include="ObjectMothers\PersonalDetailsMother.cs" />
+    <Compile Include="ObjectMothers\PolicyDetailsMother.cs" />
+    <Compile Include="ObjectMothers\RiskMother.cs" />
+    <Compile Include="ObjectMothers\VehicleAdditionalDetailsMother.cs" />
+    <Compile Include="ObjectMothers\VehicleDetailsMother.cs" />
+    <Compile Include="ObjectMothers\VehicleUsageMother.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\WebDriverFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
